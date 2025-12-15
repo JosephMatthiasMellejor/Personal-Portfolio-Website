@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="png" href="crown.png" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <header class="header-fix">
+      <nav>
+        <div class="header-container">
+          <h1><i class="fa-brands fa-css3-alt"></i>My Personal Portfolio</h1>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About Section -->
+      <section id="about">
+        <header>
+          <h2>About Me</h2>
+        </header>
+
+        <div class="about-content">
+          <figure>
+            <img
+              src="Myprofile.jpg"
+              alt="Joseph Matthias I. Mellejor"
+              class="my-profile"
+            />
+          </figure>
+
+          <p>
+            Hi! I’m Joseph Matthias I. Mellejor, a 3rd year student taking up
+            Bachelor of Science in Information Technology at Bohol Island State
+            University – Balilihan Campus. Welcome to my portfolio. I am a
+            beginner in web development and currently exploring webpage
+            creation. Here, you can view some of my projects and the work I have
+            been doing as I continue to develop my skills.
+          </p>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section">
+        <header>
+          <h2>My Projects</h2>
+        </header>
+
+        <div class="projects-container">
+          <article class="project-card">
+            <img src="Project1.png" alt="Project 1" />
+            <h3>Project One</h3>
+            <p>My project in Social Media Poster</p>
+          </article>
+
+          <article class="project-card">
+            <img src="Project2.png" alt="Project 2" />
+            <h3>Project Two</h3>
+            <p>My project in Infographic Design</p>
+          </article>
+
+          <article class="project-card">
+            <img src="Project3.png" alt="Project 3" />
+            <h3>Project Three</h3>
+            <p>My project for sample Digital Poster</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <header>
+          <h2>Contact Me</h2>
+        </header>
+
+        <div class="contact-links">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=yazmatty@gmail.com%20Contact&body=Hello%2C%0A%0AI%20would%20like%20to%20contact%20you%20regarding%20your%20portfolio.%0A%0AThank%20you."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ✉️ Email Me
+          </a>
+
+          <a href="https://www.facebook.com/Kingkiwinky23" target="_blank">
+            📘 Facebook
+          </a>
+
+          <a href="https://www.instagram.com/yourusername" target="_blank">
+            📸 Instagram
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea
+        name="message"
+        rows="4"
+        placeholder="Your Message"
+        required
+      ></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 My Portfolio | All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

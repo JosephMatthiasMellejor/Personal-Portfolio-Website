@@ -1,0 +1,174 @@
+/* ===== GENERAL STYLES ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('Mybackground.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #87ceeb; /* changed from #ffeb3b */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.3);
+}
+
+/* Facebook & Instagram hover colors */
+.social-icons a:nth-child(1):hover { color: #1877f2; } /* FB blue */
+.social-icons a:nth-child(2):hover { color: #e1306c; } /* IG pink/purple */
+
+/* BACK BUTTON */
+.back-button-container {
+  padding: 1rem 10%;
+  text-align: left;
+}
+
+.back-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00bfff; /* changed from #ff6f61 */
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 1000;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #009acd; /* changed from #ff3b2e */
+  transform: scale(1.1);
+}
+
+/* Overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+/* ===== ABOUT SECTION ===== */
+#about {
+  padding: 5rem 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about header h2 {
+  font-size: 2.5rem;
+  color: #87ceeb; /* changed from #ffeb3b */
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+#about header h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #00bfff; /* changed from #ff6f61 */
+  margin: 0.5rem auto 0;
+  border-radius: 3px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+/* Profile Picture */
+.about-content figure {
+  margin: 0;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00bfff; /* changed from #ff6f61 */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.7);
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #87ceeb; /* changed from #ffeb3b */
+}
+
+/* About Text */
+.about-text {
+  max-width: 500px;
+  color: #fff;
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  font-size: 1.1rem;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+}
